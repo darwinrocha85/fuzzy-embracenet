@@ -14,6 +14,7 @@
 ---
 
 <a name="english"></a>
+
 ## 🇬🇧 English
 
 ### Overview
@@ -32,13 +33,14 @@
 
 Evaluated on the **IEMOCAP** dataset (4 emotions: anger, happiness, sadness, neutral):
 
-| Metric | FuzzyEmbraceNet | EmbraceNet (ReLU) | Improvement |
-|--------|----------------|-------------------|-------------|
-| **Accuracy** | 87.03% | 77.00% | +10.03 pp |
-| **F1-Macro** | 86.52% | 78.00% | +8.52 pp |
-| **F1-Weighted** | 87.02% | 78.70% | +8.32 pp |
+| Metric          | FuzzyEmbraceNet | EmbraceNet (ReLU) | Improvement |
+| --------------- | --------------- | ----------------- | ----------- |
+| **Accuracy**    | 87.03%          | 77.00%            | +10.03 pp   |
+| **F1-Macro**    | 86.52%          | 78.00%            | +8.52 pp    |
+| **F1-Weighted** | 87.02%          | 78.70%            | +8.32 pp    |
 
 **Per-class F1 scores:**
+
 - Anger: 0.84
 - Happiness: 0.90
 - Sadness: 0.86
@@ -52,11 +54,11 @@ FuzzyEmbraceNet processes three modalities independently before fusion:
    - Input: 8 frames per utterance (48×48 pixels)
    - Standalone accuracy: 41%
 
-2. **Audio**: HuBERT-Large + 3-layer MLP (nested LOSO)
+2. **Audio**: HuBERT + 3-layer MLP (nested LOSO)
    - Embeddings: Mean of last 4 hidden states (1024-dim)
    - Standalone accuracy: 65%
 
-3. **Text**: DialogXL (XLNet-base + Transformer encoder + BiGRU)
+3. **Text**: DialogXL (XLNet-base + Transformer encoder)
    - Max tokens: 2048
    - Standalone accuracy: 79%
 
@@ -66,7 +68,7 @@ FuzzyEmbraceNet processes three modalities independently before fusion:
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/fuzzy-embracenet.git
+git clone https://github.com/darwinrocha85/fuzzy-embracenet.git
 cd fuzzy-embracenet
 
 # Create virtual environment (recommended)
@@ -82,6 +84,7 @@ pip install -r requirements.txt
 #### 1. Download IEMOCAP Dataset
 
 The IEMOCAP dataset is required. You can access it from:
+
 - **Kaggle**: [IEMOCAP Dataset](https://www.kaggle.com/datasets/jiten597/iemocap)
 - **Official**: [USC IEMOCAP](https://sail.usc.edu/iemocap/)
 
@@ -143,6 +146,7 @@ fuzzy-embracenet/
 ### 🔬 Methodology
 
 **Nested Leave-One-Session-Out (LOSO)**:
+
 - For each outer fold K (test session):
   - For each inner session J:
     - If J == K: train on {1..5} \ {K}, test on K
@@ -150,6 +154,7 @@ fuzzy-embracenet/
 - **15 unique training configurations** ensuring zero data leakage
 
 **Training Details**:
+
 - Optimizer: Adam (lr=3×10⁻⁴)
 - Loss: Cross-Entropy
 - Early stopping: patience=20 epochs
@@ -190,6 +195,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <a name="español"></a>
+
 ## 🇪🇸 Español
 
 ### Descripción General
@@ -208,13 +214,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Evaluado en el dataset **IEMOCAP** (4 emociones: anger, happiness, sadness, neutral):
 
-| Métrica | FuzzyEmbraceNet | EmbraceNet (ReLU) | Mejora |
-|---------|----------------|-------------------|---------|
-| **Accuracy** | 87.03% | 77.00% | +10.03 pp |
-| **F1-Macro** | 86.52% | 78.00% | +8.52 pp |
-| **F1-Weighted** | 87.02% | 78.70% | +8.32 pp |
+| Métrica         | FuzzyEmbraceNet | EmbraceNet (ReLU) | Mejora    |
+| --------------- | --------------- | ----------------- | --------- |
+| **Accuracy**    | 87.03%          | 77.00%            | +10.03 pp |
+| **F1-Macro**    | 86.52%          | 78.00%            | +8.52 pp  |
+| **F1-Weighted** | 87.02%          | 78.70%            | +8.32 pp  |
 
 **F1-scores por clase:**
+
 - Anger (Ira): 0.84
 - Happiness (Felicidad): 0.90
 - Sadness (Tristeza): 0.86
@@ -228,11 +235,11 @@ FuzzyEmbraceNet procesa tres modalidades de forma independiente antes de la fusi
    - Entrada: 8 frames por utterance (48×48 píxeles)
    - Accuracy standalone: 41%
 
-2. **Audio**: HuBERT-Large + MLP de 3 capas (nested LOSO)
+2. **Audio**: HuBERT + MLP de 3 capas (nested LOSO)
    - Embeddings: Media de los últimos 4 hidden states (1024-dim)
    - Accuracy standalone: 65%
 
-3. **Texto**: DialogXL (XLNet-base + Transformer encoder + BiGRU)
+3. **Texto**: DialogXL (XLNet-base + Transformer encoder)
    - Tokens máximos: 2048
    - Accuracy standalone: 79%
 
@@ -242,7 +249,7 @@ FuzzyEmbraceNet procesa tres modalidades de forma independiente antes de la fusi
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/YOUR_USERNAME/fuzzy-embracenet.git
+git clone https://github.com/darwinrocha85/fuzzy-embracenet.git
 cd fuzzy-embracenet
 
 # Crear entorno virtual (recomendado)
@@ -258,6 +265,7 @@ pip install -r requirements.txt
 #### 1. Descargar el Dataset IEMOCAP
 
 Se requiere el dataset IEMOCAP. Puedes acceder desde:
+
 - **Kaggle**: [IEMOCAP Dataset](https://www.kaggle.com/datasets/jiten597/iemocap)
 - **Oficial**: [USC IEMOCAP](https://sail.usc.edu/iemocap/)
 
@@ -280,6 +288,7 @@ exec(open('src/fusion/fusion_pipeline.py').read())
 ### 🔬 Metodología
 
 **Nested Leave-One-Session-Out (LOSO)**:
+
 - Para cada fold externo K (sesión de test):
   - Para cada sesión interna J:
     - Si J == K: entrenar en {1..5} \ {K}, testear en K
@@ -287,6 +296,7 @@ exec(open('src/fusion/fusion_pipeline.py').read())
 - **15 configuraciones únicas de entrenamiento** garantizando cero fuga de datos
 
 **Detalles de Entrenamiento**:
+
 - Optimizador: Adam (lr=3×10⁻⁴)
 - Pérdida: Cross-Entropy
 - Early stopping: paciencia=20 épocas
