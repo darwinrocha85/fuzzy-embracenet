@@ -122,8 +122,6 @@ fuzzy-embracenet/
 ├── README.md                          # This file
 ├── LICENSE                            # MIT License
 ├── requirements.txt                   # Python dependencies
-├── paper/                             # Research paper
-│   └── EmbraceNet_Fuzzy_2026.pdf
 ├── src/                               # Source code
 │   ├── config.py                      # Global configuration
 │   ├── preprocessing/                 # Modality preprocessing
@@ -135,12 +133,7 @@ fuzzy-embracenet/
 │   │   └── mlp_classifier.py         # Audio MLP classifier
 │   └── fusion/                        # Multimodal fusion
 │       └── fusion_pipeline.py        # Late fusion + grid search
-├── notebooks/                         # Jupyter notebooks
-│   └── demo.ipynb                    # Usage examples
-└── docs/                              # Documentation
-    ├── architecture.md                # Model architecture details
-    ├── dataset.md                     # Dataset information
-    └── results.md                     # Experimental results
+
 ```
 
 ### 🔬 Methodology
