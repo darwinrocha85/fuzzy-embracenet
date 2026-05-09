@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# PyTorch
+*.pth
+*.pt
+*.ckpt
+
+# Data and Embeddings
+embeddings/
+*.pkl
+*.csv
+*.npy
+*.npz
+
+# IEMOCAP Dataset (too large for git)
+IEMOCAP/
+IEMOCAP_full_release/
+data/IEMOCAP/
+
+# Output directories
+working/
+nested_loso/
+fusion_results/
+checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+._*
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+INSTRUCCIONES.md
+STATUS.md
+NEXT_STEPS.md
