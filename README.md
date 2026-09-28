@@ -5,7 +5,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Paper](https://img.shields.io/badge/Paper-PDF-red.svg)](paper/EmbraceNet_Fuzzy_2026.pdf)
+[![Status](https://img.shields.io/badge/Manuscript-in%20preparation-orange.svg)](#citing-this-work)
 
 **[English](#english) | [Español](#español)**
 
@@ -161,9 +161,8 @@ If you use this code in your research, please cite:
 @article{rocha2026fuzzy,
   title={Fuzzy EmbraceNet: Neuro-fuzzy integration for multimodal emotion recognition},
   author={Rocha, Darwin and Carrasquel, Soraya and Coronado, David and Aguilera, Ana},
-  journal={[Journal Name]},
   year={2026},
-  note={Manuscript submitted for publication}
+  note={Manuscript in preparation}
 }
 ```
 
@@ -303,9 +302,8 @@ Si usas este código en tu investigación, por favor cita:
 @article{rocha2026fuzzy,
   title={Fuzzy EmbraceNet: Neuro-fuzzy integration for multimodal emotion recognition},
   author={Rocha, Darwin and Carrasquel, Soraya and Coronado, David and Aguilera, Ana},
-  journal={[Nombre del Journal]},
   year={2026},
-  note={Manuscrito enviado para publicación}
+  note={Manuscrito en preparación}
 }
 ```
 
